@@ -1,31 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-.text-link {
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .4s;
-    text-align: center;
-    display: block;
-}
-.text-link:hover {
-    color: #fff;
-    background-size: 100% 2px;
-}
-
-.navbar {
+body {
     z-index: 6;
-    top: 0;
-    left: 0;
-    background-color: rgb(87, 182, 189);
 }
+.menu {
+    z-index: 5;
+    background-color: rgb(180, 168, 0);
+    background-image: url("../img/bgMenu.webp");
+    background-repeat: repeat;
+}
+.menu ul {
+    display: flex;
+    justify-content: end;
+}
+
+.bg-incio {
+    background-color: rgb(180, 168, 0);
+    background-image: url("../img/BgInicio.webp");
+    background-size: contain;
+}
+
+.title-family {
+    font-family: "Pacifico", cursive;
+    background: rgb(36,0,0);
+    background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,116,1) 50%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hover-img:hover {
+    transform: scale(1.009);
+    transition: 0.4s ease;
+    cursor: pointer;
+    z-index: 3;
+}
+.h-img{
+    height: 91.8%;
+}
+
+.h-img-entradas {
+    height: 77%;
+    object-fit: fill;
+}
+/* 
+.before::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: 5px;
+    width: 50px;
+    height: 10px;
+    background-color: red;
+} */
+.menu-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.menu-icon, #check {
+    display: none;
+}
+
+@media (max-width: 750px){
+    .menu ul {
+        display: none;
+    }
+    .menu ul li a{
+        text-align: center;
+        display: block;
+        font-size: 23px;
+        line-height: 50px;
+    }
+
+    .menu-icon{
+        display: block;
+        padding: 5px;
+    }
+
+    #check:checked ~ ul{
+        display: block;
+        animation: moverMenu .6s ease;
+    }
+    @keyframes moverMenu {
+        0%{
+            transform: translateY(-200px);
+        }
+        100% {
+            transform: translate(auto);
+        }
+    }
+}
+
+

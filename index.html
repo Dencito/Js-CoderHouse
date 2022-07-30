@@ -1,18 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Banco DP</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="img/iconos/LogoDPBebidas.png">
+    <title>Boliche DP</title>
 </head>
+
 <body>
+    <!-- MENU -->
+    <header class="container-fluid position-fixed top-0 mb-5">
+        <nav class="row menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menu-icon"><img src="img/iconos/iconMenu.png" alt=""></i>
+            </label>
+            <ul class="p-2 list-unstyled">
+                <li class="mx-2 pt-1">
+                    <a href="#" class="text-decoration-none h5 fw-bold text-white">Comprar entradas</a>
+                </li>
+                <li class="mx-2 pt-1">
+                    <a href="#" class="text-decoration-none h5 fw-bold text-white">Bebidas</a>
+                </li>
+                <li class="mx-2 pt-1">
+                    <a href="#" class="text-decoration-none h5 fw-bold text-white">Donde nos ubicamos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INICIO -->
+    <main class="container bg-incio p-0 p-lg-5 mt-5">
+        <h1 class="text-center display-1 fw-bold title-family mt-2 text-white pt-5">Boliche DP</h1>
+        <div class="row">
+            <div class="col-12 col-lg-6 p-4 ps-lg-5 mt-5 mx-auto">
+                <p class="text-white h5">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                    temporibus iusto soluta sapiente, provident nihil, id est tempore
+                    debitis accusantium quidem minus enim similique magnam sunt incidunt
+                    molestias. Velit, expedita eius deleniti voluptates, in ad
+                    consequuntur unde sed, odio eum rerum obcaecati. Saepe expedita ea
+                    nulla assumenda modi. Quam quo aspernatur amet reprehenderit.
+                    Similique laborum maiores totam. Eligendi assumenda ex doloribus.
+                    Molestiae fugit harum odit earum, sapiente maiores eius repudiandae
+                    laborum modi reprehenderit voluptatibus at voluptatem commodi minus
+                    cumque fugiat, quis sed dignissimos consequatur error doloribus
+                    provident in? Veritatis nam commodi praesentium molestias aut minima
+                    voluptatem voluptate explicabo quae omnis!
+                </p>
+            </div>
+            <div class="col-12 col-lg-6 ps-3 ps-lg-5 mt-5 mx-auto">
+                <img src="img/bebidas/MostradorDeLicores.webp" alt="" class="w-100 h-100 mx-auto pe-1 d-block rounded shadow-sm" />
+            </div>
+        </div>
+    </main>
+    <!-- ENTRADAS -->
+    <section class="container p-5 mt-3">
+        <h2 class="text-center my-5 display-3 fw-bold">Entradas</h2>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 shadow p-3 overflow-hidden hover-img h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Entrada Comun</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus perspiciatis, ab enim mollitia sed, possimus molestias excepturi expedita similique fugit ducimus illo ullam commodi cumque unde cum tempora minus. Cumque pariatur repellendus quibusdam debitis consequuntur, veniam dolores ex magni?</p>
+                <img src="img/bebidas/cervezaCorona.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
 
+            <div class="col-12 col-md-6 col-lg-4 shadow-sm p-3 overflow-hidden hover-img h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Entrada Semi-VIP</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus perspiciatis, ab enim mollitia sed, possimus molestias excepturi expedita similique fugit ducimus illo ullam commodi cumque unde cum tempora minus. Cumque pariatur repellendus quibusdam debitis consequuntur, veniam dolores ex magni?</p>
+                <img src="img/bebidas/licorRaroConHumo.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
 
+            <div class="col-12 col-md-6 col-lg-4 mt-md-5 mt-lg-0 shadow-lg p-3 overflow-hidden hover-img h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Entrada VIP</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus perspiciatis, ab enim mollitia sed, possimus molestias excepturi expedita similique fugit ducimus illo ullam commodi cumque unde cum tempora minus. Cumque pariatur repellendus quibusdam debitis consequuntur, veniam dolores ex magni?</p>
+                <img src="img/bebidas/sidra.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+        </div>
+    </section>
+    <!-- IMAGENES DE PERSONAS DISFRUTANDO -->
+    <section class="container p-5 mt-3 mx-auto">
+        <div class="row">
+            <div class="img1 col-12 col-md-12 col-lg-8"><img src="img/personas/personasFestejando1.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+            <div class="img4 col-12 col-md-6 col-lg-4"><img src="img/personas/personasFestejando4Vertical.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+            <div class="img5 col-12 col-md-6 col-lg-4"><img src="img/personas/personasFestejando5Vertical.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+            <div class="img2 col-12 col-md-12 col-lg-8"><img src="img/personas/personasFestejando2.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+            <div class="img3 col-12 col-md-12 col-lg-6"><img src="img/personas/personasFestejando3.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+            <div class="img6 col-12 col-md-12 col-lg-6"><img src="img/personas/personasFestejando6.webp" alt="" class="w-100 h-img rounded shadow-lg cursor-pointer"></div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="./js/script.js"></script>
+    <!-- UBICACION -->
+    <section class="container p-5 mt-sm-0 mt-lg-3 ubicacion">
+        <div class="row">
+            <header class="col-12">
+                <h2 class="text-center my-5 display-3 fw-bold">Nuestra ubicacion</h2>
+                <h3 class="text-center my-5 h2 fw-normal">Nuestros horarios</h3>
+                <p class="h5 text-center">Lunes a Sabados</p>
+                <p class="h5 text-center">22:00PM a 6:00AM</p>
+            </header>
+            <div class="col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13125.986994109642!2d-58.4515826!3d-34.6674103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1658962700149!5m2!1ses!2sar" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded shadow-lg mt-5"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-dark p-1">
+        <p class="text-center text-white mt-2 h6">Copyright  Denar Padilla Gutierrez</p>
+    </footer>
+    <!-- FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
