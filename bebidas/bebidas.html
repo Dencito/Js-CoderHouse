@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../img/iconos/LogoDPBebidas.png">
+    <title>Boliche DP</title>
+</head>
+
+<body>
+    <!-- MENU -->
+    <header class="container-fluid position-fixed top-0 mb-5">
+        <nav class="row menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menu-icon"><img src="../img/iconos/iconMenu.png" alt=""></i>
+            </label>
+            <ul class="p-2 list-unstyled">
+                <li class="mx-2 pt-1">
+                    <a href="../index.html#entradas" class="text-decoration-none h5 fw-bold text-white hover-nav">Comprar entradas</a>
+                </li>
+                <li class="mx-2 pt-1">
+                    <a href="bebidas.html" class="text-decoration-none h5 fw-bold text-white hover-nav">Bebidas</a>
+                </li>
+                <li class="mx-2 pt-1">
+                    <a href="../index.html#ubicacion" class="text-decoration-none h5 fw-bold text-white hover-nav">Donde nos ubicamos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INICIO -->
+    <!-- ENTRADAS -->
+    <section class="container p-5 mt-3">
+        <h2 class="text-center my-5 display-3 fw-bold">Bebidas</h2>
+        <div class="busqueda">
+            <div class="m-5">
+                <label for="buscaNombre">Buscar por nombre</label>
+                <input type="text" name="" class="inputBusqueda" id="nombre">
+            </div>
+        </div>
+        <div class="row contenedorProductos card-group">
+            <!-- <div class="col-12 col-md-6 col-lg-4 shadow p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dolorum.</p>
+                <img src="../img/bebidas/fernetConCoca.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow-sm p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</p>
+                <img src="../img/bebidas/campari.jpg" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow-lg p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, esse?</p>
+                <img src="../img/bebidas/champagne.jpg" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dolorum.</p>
+                <img src="../img/bebidas/cervezaCorona.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow-sm p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</p>
+                <img src="../img/bebidas/smirnoff.jpg" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mt-md-5 mt-lg-0 shadow-lg p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, esse?</p>
+                <img src="../img/bebidas/vinos.jpg" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dolorum.</p>
+                <img src="../img/bebidas/whiskey.jpg" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 shadow-sm p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</p>
+                <img src="../img/bebidas/sidra.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mt-md-5 mt-lg-0 shadow-lg p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, esse?</p>
+                <img src="../img/bebidas/licorRaroConHumo.webp" alt="" class="w-100 h-img-entradas rounded pb-5 px-2">
+            </div> -->
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-dark p-1">
+        <p class="text-center text-white mt-2 h6">Copyright  Denar Padilla Gutierrez</p>
+    </footer>
+    <!-- FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./bebidas.js"></script>
+</body>
+
+</html>
