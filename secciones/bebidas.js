@@ -54,7 +54,7 @@ const bebidas = [{
     precio: 500,
     imagen: '../img/bebidas/vinos.jpg',
     descripcion_corta: 'Botella de Vino',
-    descripcion: ''
+    descripcion: 'El vino (del latín vinum) es una bebida hecha de uva (especie Vitis vinifera), mediante la fermentación alcohólica de su mosto o zumo.'
 
 },
 {
@@ -95,7 +95,7 @@ function crearProductos(array, contenedor) {
         producto.className = 'col-12 col-md-6 col-lg-4 shadow p-3 overflow-hidden cursor-p h-auto pb-5 pb-md-3 pb-lg-5 pb-xxl-0';
         producto.id = `${item.id}`;
         producto.innerHTML = `
-        <h4 class="card-header">${item.nombre}</h4>
+        <h4 class="text-center p-3">${item.nombre}</h4>
         <img src="${item.imagen}" class="w-100 h-img-entradas rounded pb-5 px-2" alt="${item.descripcion_corta}">
         <div class="card-body">
             <p class="card-text">${item.descripcion}</p>
