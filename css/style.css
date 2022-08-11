@@ -11,30 +11,31 @@ html {
 body {
     z-index: 6;
 }
-.menu {
+.bg-menu {
     z-index: 4;
     background-color: rgb(180, 168, 0);
     background-image: url("../img/bgMenu.webp");
     background-repeat: repeat;
+    height: 53px;
 }
-.menu ul {
+.bg-menu ul {
     display: flex;
     justify-content: end;
 }
 
 .bg-incio {
-    background-color: rgb(180, 168, 0);
-    background-image: url("../img/BgInicio.webp");
-    background-size: contain;
+    background-image: url("../img/textura.webp");
+    background-repeat: repeat;
 }
 
 .title-family {
     font-family: "Pacifico", cursive;
     background: rgb(36,0,0);
-    background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,116,1) 50%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(196, 22, 22) 0%, rgb(206, 11, 196) 50%, rgb(231, 216, 9) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 8px 5px 3px #fff;
 }
 .h-100vh{
     height: 100vh;
@@ -62,19 +63,13 @@ body {
 }
 
 .h-img-entradas {
-    height: 77vh;
+    height: 60vh;
     object-fit: fill;
 }
-/* 
-.before::before {
-    content: '';
-    display: block;
-    position: relative;
-    left: 5px;
-    width: 50px;
-    height: 10px;
-    background-color: red;
-} */
+.h-img-bebidas {
+    height: 75vh;
+    object-fit: fill;
+}
 .menu-icon img {
     width: 40px;
     height: 40px;
@@ -88,9 +83,58 @@ body {
     cursor: pointer;
 }
 
+.carritoDeCompras {
+    display: none;
+    position: fixed;
+    top: 100;
+}
+#contadorCarrito {
+    position: absolute;
+    left: 40%;
+    top: -10%;
+    background-color: rgb(15, 195, 226);
+    width: 29px;
+    border-radius: 50%;
+    padding-bottom: 5px;
+}
+
+#contenedorCarrito {
+    height: 300px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.iconCarrito {
+    position: relative;
+    top: -5px;
+}
+.h-img-carrito {
+    width: 60px;
+    height: 80px;
+}
+
+#toggleCarrito:checked ~ .carritoDeCompras {
+    background: #000;
+    display: block;
+    min-height: 200px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 100;
+    left: 0;
+}
+.position-carrito {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 3;
+}
+
+
 @media (max-width: 750px){
     .menu ul {
         display: none;
+        background-image: url("../img/bgMenu.webp");
+        background-repeat: repeat;
     }
     .menu ul li a{
         text-align: center;
@@ -107,6 +151,7 @@ body {
     #check:checked ~ ul{
         display: block;
         animation: moverMenu .6s ease;
+        position: relative;
     }
     @keyframes moverMenu {
         0%{
@@ -116,6 +161,22 @@ body {
             transform: translate(auto);
         }
     }
+
+    .inputBusqueda {
+        width: 100%;
+    }
+
+    #contenedorCarrito {
+        position: relative;
+        max-height: 90vh;
+        min-width: 50vw;
+        max-width: 100vw;
+        overflow-y: scroll;
+        padding: 15px;
+        z-index: 2;
+    }
+    
+
 }
 
 
