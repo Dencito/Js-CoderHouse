@@ -138,10 +138,22 @@ const bebidas = [{
 
 }];
 
+console.log(...bebidas)
+const [a,b,c,d,f,g,h,i,j,k,l] = bebidas
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+console.log(f)
+console.log(g)
+console.log(h)
+console.log(k)//undefined
+console.log(l)//undefined :c
+
 let carrito = [];
 
 const comprarTodo = document.getElementById('ComprarCarrito');
-const carritoCheck = document.getElementById('toggleCarrito')
+const carritoCheck = document.getElementById('toggleCarrito');
 
 comprarTodo.addEventListener('click', ()=>{
     if(carrito.length >= 1){
@@ -154,7 +166,6 @@ comprarTodo.addEventListener('click', ()=>{
     
         }).then()
         actualizarCarrito();
-        localStorage.clear();
     }else{
         Swal.fire({
             title: 'No hay ningun producto',
@@ -162,7 +173,6 @@ comprarTodo.addEventListener('click', ()=>{
             icon: 'error',
         }).then()
     }
-    /* setInterval(document.location.reload(),4000) */
 })
 
 
@@ -218,9 +228,10 @@ const agregarAlCarrito =(prodId) => {
 
     if(existe){
         const prod = carrito.map(prod => {
-            if(prod.id === prodId){
+            prod.id === prodId && prod.cantidad++;//operador AND
+            /* if(prod.id === prodId){
                 prod.cantidad++;
-            }
+            } */
         })
     }else {
         const item = bebidas.find((prod) => prod.id === prodId);
@@ -280,6 +291,7 @@ const actualizarCarrito = ()=>{
         } */
         
     }).showToast()
+    
 }
 
 
@@ -370,3 +382,64 @@ btnCalcular.addEventListener('click', ()=>{
     })
 })
  */
+
+
+/* 
+setTimeout(() => {
+    console.log('Hola')
+}, 2500);
+ */
+/* let btnMostrar = document.querySelector('#btnMostrar');
+let imgTest = document.querySelector('#imgTest');
+
+
+imgTest.className ='w-25 d-none';
+
+btnMostrar.addEventListener('click', ()=>{
+    setTimeout(() => {
+        imgTest.className ='w-25 d-block';
+    }, 2500);
+
+}) */
+
+/* 
+new Promise((resolve,reject)=>{
+    //cuerpo de la promesa
+})
+ */
+/* 
+const eventoFuturo = (respuesta)=>{
+    return new Promise((resolve, reject)=>{ */
+/*  if(respuesta == true){
+            resolve('promesa aprobada');
+        }else{
+            reject('promesa rechazada');
+        } */
+/*         setTimeout(()=>{
+        respuesta === true ? resolve('yupiii') : reject('D\'oh')
+        },2000)
+    })
+} */
+/* 
+console.log(eventoFuturo(true));
+console.log(eventoFuturo(false)); */
+/* 
+eventoFuturo(true).then((response)=>{
+    console.log(response);
+}).catch((error)=>{
+    console.log(error)
+}).finally(()=>{
+    console.log('Fin de la ejecucion');
+})
+ */
+/* 
+
+const bebidas2 = bebidas;
+
+const pedirProductos = ()=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve(bebidas2)
+        }, 500);
+    })
+} */
