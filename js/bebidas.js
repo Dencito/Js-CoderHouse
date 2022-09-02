@@ -1,4 +1,7 @@
+
 const traerBebidas = async () =>{
+
+    
     const respuesta = await fetch(`../js/bebidas.json`);
     const bebidas = await respuesta.json();
 
@@ -52,7 +55,8 @@ const traerBebidas = async () =>{
                 agregarAlCarrito(item.id);
             })
         }
-    }
+        
+}
     
     const buscar = (array, criterio, input)=> {
         return array.filter((item) => item[criterio].includes(input))
@@ -86,12 +90,6 @@ const traerBebidas = async () =>{
         
     }
     
-    const eliminarDelCarrito =  (prodId) => {
-    const item = carrito.find((prod)=>prod.id === prodId);
-    const indice = carrito.indexOf(item);
-    carrito.splice(indice, 1);
-    actualizarCarrito();
-    }
     
     const actualizarCarrito = ()=>{
     
@@ -104,11 +102,17 @@ const traerBebidas = async () =>{
             <p class="mx-2">${prod.nombre}</p>
             <p class="mx-2">Precio: $${prod.precio} c/u</p>
             <p class="mx-2">Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-            <button onclick = "eliminarDelCarrito(${prod.id})" class="btn d-block mx-auto"><img src="../img/iconos/borrar.png" alt="" class="w-50 rounded shadow-lg cursor-pointer"></button>`;
-    
+            <button class="btn d-block mx-auto btnx"><img src="../img/iconos/borrar.png" alt="" class="w-50 rounded shadow-lg cursor-pointer"></button>`;
             contenedorCarrito.appendChild(cajaCarrito);
-            localStorage.setItem('carrito', JSON.stringify(carrito))
         })
+
+        const btns = document.querySelectorAll('.btnx');
+        btns.forEach((btn,index) => {
+            btn.addEventListener('click', ()=>{
+                carrito.splice(index, 1);
+                actualizarCarrito();
+            })
+        });
     
         contadorCarrito.innerText = carrito.length;
         precioTotal.innerText = carrito.reduce((acc, prod)=> acc + prod.precio*prod.cantidad, 0);
@@ -127,6 +131,11 @@ const traerBebidas = async () =>{
             
         }).showToast()
         
+    }
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+        actualizarCarrito()
+        console.log('hola uwu')
     }
     
     
@@ -214,13 +223,10 @@ const traerBebidas = async () =>{
         }
     })
 
-    document.addEventListener('DOMContentLoaded', ()=>{
-        if(localStorage.getItem('carrito')){
-            carrito = JSON.parse(localStorage.getItem('carrito'));
-            actualizarCarrito()
-        }
-    })
+    
 
 }
 
 traerBebidas()
+
+
